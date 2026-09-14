@@ -1,0 +1,113 @@
+/* style.css - Унифицированные стили для тёмной темы */
+
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --border-color: #2e2e2e;
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --accent-color: #3b82f6; /* Деликатный синий акцент */
+    --accent-hover: #2563eb;
+    --max-width: 700px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* Контейнер-карточка (унифицированная форма) */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Заголовки */
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 6px;
+}
+
+/* Списки */
+ul {
+    list-style-type: none;
+    margin-bottom: 16px;
+}
+
+li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
+li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+li strong {
+    color: var(--text-main);
+}
+
+/* Ссылки и навигация */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 32px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Стили для блоков пользователей на главной странице */
+.user-block {
+    margin-top: 20px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
